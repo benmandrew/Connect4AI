@@ -3,10 +3,10 @@ from ai import AI
 
 def getUserInput(board):
     column = int(input("Choose slot: ")) - 1
-    print(board._boardFreeSlots[column])
     while not (0 <= column < Board.BOARDWIDTH) or board._boardFreeSlots[column] == Board.BOARDHEIGHT:
         print("Please choose a valid slot.")
         column = int(input("Choose slot: ")) - 1
+    print()
     return column
 
 def gameLoop():
